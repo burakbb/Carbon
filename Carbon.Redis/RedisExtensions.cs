@@ -266,7 +266,7 @@ namespace Carbon.Redis
         /// </summary>
         /// <typeparam name="T">the type of expected data object</typeparam>
         /// <param name="cacheObject"></param>
-        /// <returns>a boolean isSuccess flag and an error message.</returns>
+        /// <returns>a dataset and an error message.</returns>
         public static async Task<(T cachedData, string errorMessage)> GetWithLogging<T>(this CacheObject cacheObject)
         {
             if (cacheObject == null || string.IsNullOrWhiteSpace(cacheObject.CacheKey))
